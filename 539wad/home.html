@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="home.css">
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #e0e1dd, #778da9); /* Soft gradient background with updated colors */
+    color: #0d1b2a;
+    animation: fadeInBody 1.5s ease-in-out; /* Animation for body on page load */
+}
+
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Header Styling */
+header {
+    background: rgba(13, 27, 42, 0.9); /* #0d1b2a with transparency */
+    color: #e0e1dd;
+    padding: 1.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDownHeader 1s ease-in-out; /* Animation for header */
+}
+
+@keyframes slideDownHeader {
+    from {
+        top: -100px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: #e0e1dd;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #415a77; /* Hover effect with lighter blue */
+    transform: scale(1.1);
+}
+
+/* Hero Section Styling */
+.hero {
+    padding: 6rem 0;
+    text-align: center;
+    color: #e0e1dd;
+    background: rgba(0, 0, 0, 0.6);
+    margin-top: 5rem;
+    animation: fadeInHero 1.5s ease-in-out; /* Fade-in animation for the hero section */
+}
+
+@keyframes fadeInHero {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #778da9; /* Bright blue-grey color */
+    animation: zoomInTitle 1.2s ease-in-out; /* Title zoom-in effect */
+}
+
+@keyframes zoomInTitle {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.hero button {
+    padding: 0.8rem 2rem;
+    background-color: #415a77; /* Button with dark blue */
+    color: #e0e1dd;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: bounceInButton 1.5s ease-in-out; /* Button bounce effect */
+}
+
+@keyframes bounceInButton {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.hero button:hover {
+    background-color: #778da9; /* Hover effect with lighter blue */
+    transform: scale(1.05);
+}
+
+/* Announcements Section */
+#announcements {
+    padding: 2rem 0;
+    background: #e0e1dd; /* Light cream background */
+    text-align: center;
+    animation: fadeInAnnouncements 2s ease-in-out; /* Fade-in for announcements */
+}
+
+@keyframes fadeInAnnouncements {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#announcements h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #0d1b2a; /* Darker tone for title */
+}
+
+#announcements ul {
+    list-style: none;
+    padding: 0;
+}
+
+#announcements ul li {
+    background: #415a77;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border-left: 5px solid #e0e1dd; /* Accent color */
+    font-size: 1.1rem;
+    border-radius: 3px;
+    animation: slideInAnnouncement 1.5s ease-in-out; /* Slide-in for each announcement */
+}
+
+@keyframes slideInAnnouncement {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Quick Links Section */
+#quick-links {
+    padding: 2rem 0;
+    background: #778da9; /* Soft background */
+    text-align: center;
+    animation: fadeInQuickLinks 1.5s ease-in-out; /* Quick links section animation */
+}
+
+@keyframes fadeInQuickLinks {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#quick-links .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#quick-links .links a {
+    display: inline-block;
+    margin: 0.75rem 1.25rem;
+    padding: 1rem 1.75rem;
+    text-decoration: none;
+    background: #0d1b2a;
+    color: #e0e1dd;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background 0.3s, transform 0.3s;
+    animation: zoomInLink 1s ease-in-out; /* Quick links animation */
+}
+
+@keyframes zoomInLink {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#quick-links .links a:hover {
+    background: #415a77; /* Hover effect */
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    background: #0d1b2a;
+    color: #e0e1dd;
+    padding: 1.5rem 0;
+    text-align: center;
+    animation: fadeInFooter 1.5s ease-in-out; /* Fade-in for footer */
+}
+
+@keyframes fadeInFooter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer a {
+    color: #778da9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1> Siddhartha School Management </h1>
+            <nav>
+                <ul>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./sp.html">Students</a></li>
+                    <li><a href="./tp.html">Teachers</a></li>
+                    <li><a href="./schedule table.html">Classes</a></li>
+                    <li><a href="./syllabus.html">Syllabus</a></li>
+                    <li><a href="./contactus.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Our School Management System</h2>
+            <p>Efficiently manage student records, faculty details, class schedules, and more!</p>
+            <button id="learnMoreBtn">Learn More</button>
+        </div>
+    </section>
+
+    <section id="announcements">
+        <div class="container">
+            <h2>Announcements</h2>
+            <ul>
+                <li>School will be closed on October 10th due to DASARA HOLIDAYS</li>
+                <li>Parent-Teacher Meeting scheduled for October 25th.</li>
+                <li>New semester begins on November 1st.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="quick-links">
+        <div class="container">
+            <h2>Quick Links</h2>
+            <div class="links">
+                <a href="./sp.html">Student Portal</a>
+                <a href="./tp.html">Teacher Portal</a>
+                <a href="./schedule table.html">Class Schedules</a>
+                <a href="./syllabus.html">Syllabus</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Siddhartha School Management . All rights reserved.</p>
+            <p><a href="#contact">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('learnMoreBtn').addEventListener('click', function() {
+            alert("Welcome to the School Management. Navigate through the portals to explore more!");
+        });
+    </script>
+</body>
+</html>

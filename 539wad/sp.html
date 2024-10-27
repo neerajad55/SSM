@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="sp.css">
+    <style>
+        body {
+            background: url('./WhatsApp Image 2024-10-09 at 6.24.26 PM (3).jpeg') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background:#000080;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #ccc 3px solid;
+        }ac
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgb(152,105,96);
+        }
+        .form-container h2 {
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #fff;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background:#000080;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Student Portal</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Add Student Form -->
+        <div class="form-container">
+            <h2> Student</h2>
+            <form id="student-form">
+                <label for="student-name">Name:</label>
+                <input type="text" id="student-name" name="student-name" required><br><br>
+                <label for="student-class">Class:</label>
+                <input type="text" id="student-class" name="student-class" required><br><br>
+                <label for="student-rollno">Roll No:</label>
+                <input type="text" id="student-rollno" name="student-rollno" required><br><br>
+                <input type="submit" value="Add Student">
+            </form>
+        </div>
+
+        <!-- Add Teacher Form -->
+        <div class="form-container">
+            <h2>
+                Class Teacher
+            </h2>
+            <form id="teacher-form">
+                <label for="teacher-name">Name:</label>
+                <input type="text" id="teacher-name" name="teacher-name" required><br><br>
+                <label for="teacher-subject">Subject:</label>
+                <input type="text" id="teacher-subject" name="teacher-subject" required><br><br>
+                <label for="teacher-id">Teacher ID:</label>
+                <input type="text" id="teacher-id" name="teacher-id" required><br><br>
+                <input type="submit" value="Add Teacher">
+            </form>
+        </div>
+
+
+    <script>
+        // Adding student data
+        document.getElementById('student-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let name = document.getElementById('student-name').value;
+            let className = document.getElementById('student-class').value;
+            let rollNo = document.getElementById('student-rollno').value;
+
+            let table = document.getElementById('students-table').getElementsByTagName('tbody')[0];
+            let newRow = table.insertRow();
+            newRow.innerHTML = `<td>${name}</td><td>${className}</td><td>${rollNo}</td>`;
+
+            this.reset();
+        });
+
+        // Adding teacher data
+        document.getElementById('teacher-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let name = document.getElementById('teacher-name').value;
+            let subject = document.getElementById('teacher-subject').value;
+            let teacherId = document.getElementById('teacher-id').value;
+
+            let table = document.getElementById('teachers-table').getElementsByTagName('tbody')[0];
+            let newRow = table.insertRow();
+            newRow.innerHTML = `<td>${name}</td><td>${subject}</td><td>${teacherId}</td>`;
+
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+<style>
+    body {
+    background: url('./WhatsApp Image 2024-10-09 at 6.24.26 PM (3).jpeg') no-repeat center center/cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e1dd; /* Light grey background */
+    color: #0d1b2a; /* Dark blue text */
+}
+
+header {
+    background: #0d1b2a; /* Dark blue header */
+    color: #e0e1dd; /* Light text */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px #1b263b; /* Dark blue shadow */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.form-container {
+    background: #e0e1dd; /* Light background for form container */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px #1b263b; /* Dark blue shadow */
+}
+
+.form-container h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #0d1b2a; /* Dark blue for headings */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #415a77; /* Medium blue for labels */
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    background: #415a77; /* Dark blue-grey background */
+    color: #e0e1dd; /* Light text */
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: #778da9; /* Lighter blue-grey on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #e0e1dd; /* Light background for table */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #0d1b2a; /* Dark blue header */
+    color: #e0e1dd; /* Light text */
+}
+
+</style>

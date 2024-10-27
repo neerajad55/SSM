@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllabus - Box Format Links</title>
+    <link rel="stylesheet" href="syllabus.css">
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Syllabus</h1>
+        </div>
+    </header>
+    <center>
+    <div class="form-container">
+        <form>
+            <a href="./class.html">CLASS I</a>
+            <a href="./class2.html">CLASS II</a>
+            <a href="./class3.html">CLASS III</a>
+            <a href="./class4.html">CLASS IV</a>
+            <a href="./class5.html">CLASS V</a>
+            <a href="./class6.html">CLASS VI</a>
+            <a href="./classs7.html">CLASS VII</a>
+            <a href="./class8.html">CLASS VIII</a>
+            <a href="./class9.html">CLASS IX</a>
+            <a href="./class10.html">CLASS X</a>
+        </form>
+    </div>
+    </center>
+</body>
+</html>
+<script>
+    // Scroll-to-top button functionality
+    const scrollToTopBtn = document.createElement('button');
+    scrollToTopBtn.innerHTML = "&#8679;"; // Arrow up symbol
+    scrollToTopBtn.style.position = 'fixed';
+    scrollToTopBtn.style.bottom = '30px';
+    scrollToTopBtn.style.right = '30px';
+    scrollToTopBtn.style.backgroundColor = '#494a91'; // Use the accent color
+    scrollToTopBtn.style.color = '#fff'; // White text color
+    scrollToTopBtn.style.border = 'none';
+    scrollToTopBtn.style.padding = '10px 15px';
+    scrollToTopBtn.style.borderRadius = '50%'; // Make the button circular
+    scrollToTopBtn.style.fontSize = '18px';
+    scrollToTopBtn.style.cursor = 'pointer';
+    scrollToTopBtn.style.display = 'none';
+    scrollToTopBtn.style.zIndex = '1000'; // Ensures button stays above other elements
+    scrollToTopBtn.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)'; // Add a shadow for depth
+    document.body.appendChild(scrollToTopBtn);
+
+    // Show button when user scrolls down
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
+
+    // Scroll back to top when button is clicked
+    scrollToTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        color: #f0ebd8; /* Light background color for better contrast */
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background: #0d1321; /* Dark background */
+        color: #f0ebd8; /* Light text for contrast */
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .container {
+        width: 85%;
+        margin: auto;
+    }
+
+    .form-container {
+        background: #1d2d44; /* Darker tone for the form background */
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    form a {
+        background-color: #3e5c76; /* Button background color */
+        color: #f0ebd8; /* Button text color */
+        padding: 15px 25px;
+        margin: 10px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 18px;
+        transition: all 0.3s ease;
+    }
+
+    form a:hover {
+        background-color: #f0ebd8; /* Hover state changes to light background */
+        color: #3e5c76; /* Text changes to dark color */
+        border: 2px solid #3e5c76;
+        transform: scale(1.05);
+    }
+
+    footer {
+        background: #0d1321; /* Dark footer background */
+        color: #f0ebd8; /* Light text */
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        margin-top: 40px;
+    }
+
+    .scroll-to-top-btn:hover {
+        transform: scale(1.1); /* Slight enlargement when hovering */
+        background-color: #f0ebd8; /* Button background changes on hover */
+        color: #3e5c76; /* Text changes to dark color */
+        border: 2px solid #3e5c76; /* Button border */
+    }
+</style>

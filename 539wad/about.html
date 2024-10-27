@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sunrise High School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Siddhartha High School</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./contactus.html">Admissions</a></li>
+                <li><a href="./contactus.html">Contact Us</a></li>
+                <li><a href="./about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+
+        <div class="mission-vision">
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>At Sunrise High School, our mission is to provide a holistic and high-quality education that nurtures the intellectual, social, and emotional development of our students, preparing them for success in a rapidly changing world.</p>
+            </div>
+            <div class="vision">
+                <h3>Our Vision</h3>
+                <p>We envision a world where every student has access to excellent education, empowering them to reach their full potential and contribute positively to society.</p>
+            </div>
+        </div>
+
+        <div class="core-values">
+            <h3>Core Values</h3>
+            <ul>
+                <li><strong>Excellence:</strong> We strive for the highest standards in everything we do.</li>
+                <li><strong>Integrity:</strong> We promote honesty, ethics, and transparency.</li>
+                <li><strong>Respect:</strong> We value diversity and treat everyone with dignity.</li>
+                <li><strong>Community:</strong> We foster a sense of belonging and collaboration.</li>
+                <li><strong>Innovation:</strong> We encourage creativity and critical thinking to solve real-world challenges.</li>
+            </ul>
+        </div>
+
+        <div class="history">
+            <h3>Our History</h3>
+            <p>Sunrise High School was founded in 1985 with the goal of providing quality education to students in the Springfield area. Over the past three decades, we have grown from a small school with just 100 students to a thriving community of over 1,000 learners. Our school has consistently ranked among the top schools in the region, thanks to our dedicated staff and innovative educational programs.</p>
+        </div>
+
+        <div class="leadership">
+            <h3>Meet Our Leadership</h3>
+            <div class="leadership-grid">
+                <div class="leader">
+                    <img src="./th (10).jpeg" alt="Principal">
+                    <h4>Dr. K.Sivaji Babu </h4>
+                    <p>Principal</p>
+                    <p>With over 20 years of experience in education, Dr.Sivaji is passionate about creating a learning environment where every student can thrive. She holds a Ph.D. in Educational Leadership and has been with Sunrise High School since 2015.</p>
+                </div>
+                <div class="leader">
+                    <img src="./th (11).jpeg" alt="Vice Principal\">
+                    <h4>Ms.JayaLakshmi</h4>
+                    <p>Vice Principal</p>
+                    <p>Ms.Jayalakshmi brings a wealth of experience in curriculum development and student engagement. He has been instrumental in launching several innovative programs that have enhanced student learning outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sunrise High School. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0ebd8; /* Updated to light cream */
+    color: #0d1321; /* Updated to dark color for text */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1d2d44; /* Updated to dark blue */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    color: #f0ebd8; /* Updated to light cream for contrast */
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f0ebd8; /* Updated to light cream */
+}
+
+.about-us {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1d2d44; /* Updated to dark blue */
+}
+
+.mission-vision {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.mission, .vision {
+    flex: 1;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mission h3, .vision h3 {
+    color: #3e5c76; /* Updated to soft blue */
+    margin-bottom: 15px;
+}
+
+.core-values {
+    margin-bottom: 30px;
+}
+
+.core-values h3 {
+    color: #1d2d44; /* Updated to dark blue */
+    margin-bottom: 20px;
+}
+
+.core-values ul {
+    list-style-type: none;
+}
+
+.core-values ul li {
+    margin-bottom: 10px;
+}
+
+.core-values ul li strong {
+    color: #3e5c76; /* Updated to soft blue */
+}
+
+.history {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.history h3 {
+    color: #1d2d44; /* Updated to dark blue */
+    margin-bottom: 15px;
+}
+
+.leadership {
+    margin-bottom: 30px;
+}
+
+.leadership h3 {
+    color: #1d2d44; /* Updated to dark blue */
+    margin-bottom: 20px;
+}
+
+.leadership-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.leader {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.leader img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.leader h4 {
+    color: #1d2d44; /* Updated to dark blue */
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d1321; /* Updated to dark color */
+    color: #f0ebd8; /* Updated to light cream for contrast */
+    margin-top: 50px;
+}
+
+</style>
